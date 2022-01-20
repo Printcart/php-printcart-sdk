@@ -17,7 +17,6 @@ There is a AuthHelper class to help you getting the permanent access token from 
 
 ```php
 $config = array(
-    'ApiUrl' => 'https://14d6-117-7-237-55.ngrok.io/v1/',
     'Username' => 'printcart@gmail.com',
     'Password' => 'printcart'
 );

@@ -9,8 +9,8 @@ composer require php-printcart-sdk
 ```
 
 ### Requirements
-PHPPrintcart uses curl extension for handling http calls. So you need to have the curl extension installed and enabled with PHP.
->However if you prefer to use any other available package library for handling HTTP calls, you can easily do so by modifying 1 line in each of the `get()`, `post()`, `put()`, `put_batch()`, `delete()`, `delete_batch()` methods in `PHPPrintcart\HttpRequestJson` class.
+PHPPrintcart uses Guzzle extension for handling http calls. So you need to have the curl extension installed and enabled with PHP.
+>However if you prefer to use any other available package library for handling HTTP calls, you can easily do so by modifying 1 line in each of the `get()`, `post()`, `put()`, `delete()` methods in `PHPPrintcart\GuzzleRequest` class.
 
 ##### How to get the permanent access token for a shop?
 There is a AuthHelper class to help you getting the permanent access token from the shop using oAuth. 

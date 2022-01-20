@@ -2,7 +2,7 @@
     "name": "library/php-printcart",
     "description": "PHP SDK for Printcart API",
     "keywords": ["PHP","Printcart","SDK"],
-    "homepage": "https://github.com/library/php-printcart",
+    "homepage": "https://github.com/Printcart/php-printcart-sdk",
     "type": "library",
     "require": {
         "php": ">=5.6",
@@ -19,13 +19,5 @@
         "psr-4": {
             "PHPPrintcart\\": "lib/"
         }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "PHPPrintcart\\": "tests/"
-        }
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^5.5"
     }
 }

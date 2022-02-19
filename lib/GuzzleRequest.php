@@ -37,6 +37,13 @@ class GuzzleRequest
     public static $lastHttpResponseHeaders = array();
 
     /**
+     * Guzzle additional configuration
+     *
+     * @var array
+     */
+    protected static $config = array();
+
+    /**
      * Initialize the curl resource
      *
      * @param string $url
@@ -114,6 +121,16 @@ class GuzzleRequest
         $response = self::init('DELETE', $url, $httpHeaders);
 
         return $response;
+    }
+
+    /**
+     * Set Guzzle additional configuration
+     *
+     * @param array $config
+     */
+    public static function config($config = array())
+    {
+        self::$config = $config;
     }
 
     /**

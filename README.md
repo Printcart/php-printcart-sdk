@@ -1,24 +1,29 @@
 # PHP Printcart SDK
 
-PHPPrintcart is a simple SDK implementation of Printcart API. It helps accessing the API in an object oriented way. 
+PHPPrintcart is a simple SDK implementation of Printcart API. It helps accessing the API in an object oriented way.
 
 ## Installation
+
 Install with Composer
+
 ```shell
 composer require php-printcart-sdk
 ```
 
 ### Requirements
+
 PHPPrintcart uses Guzzle extension for handling http calls. So you need to have the guzzlehttp extension installed and enabled with PHP.
->However if you prefer to use any other available package library for handling HTTP calls, you can easily do so by modifying 1 line in each of the `get()`, `post()`, `put()`, `delete()` methods in `PHPPrintcart\GuzzleRequest` class.
+
+> However if you prefer to use any other available package library for handling HTTP calls, you can easily do so by modifying 1 line in each of the `get()`, `post()`, `put()`, `delete()` methods in `PHPPrintcart\GuzzleRequest` class.
 
 ##### How to get the permanent access token for a shop?
-There is a AuthHelper class to help you getting the permanent access token from the shop using oAuth. 
+
+There is a AuthHelper class to help you getting the permanent access token from the shop using oAuth.
 
 ```php
 $config = array(
-    'Username' => 'printcart@gmail.com',
-    'Password' => 'printcart'
+    'Username' => 'pcsia_b9a7d6fa332b74bdd073cabbac0e6ee539ed3b361aca0c2f7b9bbfe683430cce',
+    'Password' => 'pcsup_02be5f225e8ddb1ff1569cf4bac0c9346c60928394902ab2f193fcd5bfc2657d'
 );
 
 PHPPrintcart\PrintcartSDK::config($config);
@@ -36,7 +41,8 @@ You can provide the configuration as a parameter while instantiating the object 
 $printcart = new PHPPrintcart\PrintcartSDK($config);
 ```
 
-##### Now you can do `get()`, `post()`, `put()`, `put_batch()`, `delete()`, `delete_batch()` calling the resources in the object oriented way. All resources are named as same as it is named in printcart API reference. (See the resource map below.) 
+##### Now you can do `get()`, `post()`, `put()`, `put_batch()`, `delete()`, `delete_batch()` calling the resources in the object oriented way. All resources are named as same as it is named in printcart API reference. (See the resource map below.)
+
 > All the requests returns an array (which can be a single resource array or an array of multiple resources) if succeeded. When no result is expected (for example a DELETE request), an empty array will be returned.
 
 - Get all product list (GET request)
@@ -84,7 +90,6 @@ $printcart->Product()->post($product);
 ```
 
 > Note that you don't need to wrap the data array with the resource key (`order` in this case), which is the expected syntax from Printcart API. This is automatically handled by this SDK.
-
 
 - Update a product (PUT Request)
 
@@ -146,8 +151,8 @@ $webHookID = 12345678;
 $printcart->Webhook($webHookID)->delete();
 ```
 
-
 ### The child resources can be used in a nested way.
+
 > You must provide the ID of the parent resource when trying to get any child resource
 
 - For example, get the designs of a product (GET request)
@@ -157,11 +162,12 @@ $productID = '1b665d2f-5a29-3e03-8698-01e4dc603fa9';
 $productDesigns = $printcart->Product($productID)->Design->get();
 ```
 
-
 ## Reference
+
 - [Printcart API Reference](https://docs.printcart.com/rest-api-reference/)
 
 ## Paid Support
-You can hire the author of this SDK for setting up your project with PHPPrintcart SDK. 
+
+You can hire the author of this SDK for setting up your project with PHPPrintcart SDK.
 
 [Hire at my website](https://printcart.com/)

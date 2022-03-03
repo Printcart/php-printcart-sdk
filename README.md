@@ -7,7 +7,7 @@ PHPPrintcart is a simple SDK implementation of Printcart API. It helps accessing
 Install with Composer
 
 ```shell
-composer require php-printcart-sdk
+composer require printcart/php-printcart-sdk
 ```
 
 ### Requirements

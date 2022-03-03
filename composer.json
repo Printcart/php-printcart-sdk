@@ -1,7 +1,7 @@
 {
-    "name": "library/php-printcart",
+    "name": "printcart/php-printcart-sdk",
     "description": "PHP SDK for Printcart API",
-    "keywords": ["PHP","Printcart","SDK"],
+    "keywords": ["PHP","Printcart","SDK", "API", "Print"],
     "homepage": "https://github.com/Printcart/php-printcart-sdk",
     "type": "library",
     "require": {
@@ -12,7 +12,7 @@
     "authors": [
         {
             "name": "Printcart",
-            "email": "printcart@gmail.com"
+            "email": "dev@printcart.com"
         }
     ],
     "autoload": {

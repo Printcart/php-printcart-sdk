@@ -6,7 +6,7 @@
     "type": "library",
     "require": {
         "php": ">=5.6",
-        "guzzlehttp/guzzle": "^6.2.1",
+        "guzzlehttp/guzzle": "^7.4",
         "ext-json": "*"
     },
     "authors": [
@@ -19,6 +19,5 @@
         "psr-4": {
             "PHPPrintcart\\": "lib/"
         }
-    },
-    "minimum-stability": "dev"
+    }
 }

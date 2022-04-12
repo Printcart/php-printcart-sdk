@@ -5,8 +5,8 @@
     "homepage": "https://github.com/Printcart/php-printcart-sdk",
     "type": "library",
     "require": {
-        "php": ">=7.1",
-        "guzzlehttp/guzzle": "^7.4.0",
+        "php": ">=5.6",
+        "guzzlehttp/guzzle": "^6.2.1",
         "ext-json": "*"
     },
     "authors": [

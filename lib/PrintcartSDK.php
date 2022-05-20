@@ -79,6 +79,7 @@ use PHPPrintcart\Exception\SdkException;
  * @method Project Project(string $id = null)
  * @method Account Account(string $id = null)
  * @method Webhook Webhook(integer $id = null)
+ * @method Store Store(string $id = null)
  * @method Integration Integration(string $source = null)
  */
 class PrintcartSDK

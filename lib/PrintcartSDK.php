@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Created by PhpStorm.
  * @author Printcart <printcart@gmail.com>
@@ -49,6 +50,7 @@ namespace PHPPrintcart;
 | $products = $printcart->Product->post($productInfo);
 |
 */
+
 use PHPPrintcart\Exception\SdkException;
 
 /**
@@ -63,6 +65,8 @@ use PHPPrintcart\Exception\SdkException;
  * @property-read Project $Project
  * @property-read Account $Account
  * @property-read Webhook $Webhook
+ * @property-read Store $Store
+ * @property-read Integration $Integration
  *
  * @method Product Product(string $id = null)
  * @method Side Side(string $id = null)
@@ -75,6 +79,8 @@ use PHPPrintcart\Exception\SdkException;
  * @method Project Project(string $id = null)
  * @method Account Account(string $id = null)
  * @method Webhook Webhook(integer $id = null)
+ * @method Store Store(string $id = null)
+ * @method Integration Integration(string $source = null)
  */
 class PrintcartSDK
 {
@@ -96,6 +102,8 @@ class PrintcartSDK
         'Project',
         'Account',
         'Webhook',
+        'Store',
+        'Integration',
     );
 
     /**
@@ -103,18 +111,18 @@ class PrintcartSDK
      */
     public static $defaultApiVersion = 'v1';
 
-        /**
+    /**
      * @var string Default Printcart API version
      */
-    public static $apiUrl = 'https://14d6-117-7-237-55.ngrok.io';
+    // public static $apiUrl = 'http://localhost:8001';
+    public static $apiUrl = 'https://api.printcart.com';
 
     /**
      * Shop / API configurations
      *
      * @var array
      */
-    public static $config = array(
-    );
+    public static $config = array();
 
     /*
      * PrintcartSDK constructor
@@ -125,7 +133,7 @@ class PrintcartSDK
      */
     public function __construct($config = array())
     {
-        if(!empty($config)) {
+        if (!empty($config)) {
             PrintcartSDK::config($config);
         }
     }
@@ -189,7 +197,7 @@ class PrintcartSDK
         self::$config = array(
             'ApiVersion' => self::$defaultApiVersion
         );
-        
+
         foreach ($config as $key => $value) {
             self::$config[$key] = $value;
         }
@@ -208,7 +216,8 @@ class PrintcartSDK
      *
      * @return string
      */
-    public static function getApiUrl() {
+    public static function getApiUrl()
+    {
         return self::$config['ApiUrl'];
     }
 }
